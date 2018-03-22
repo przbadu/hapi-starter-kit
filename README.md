@@ -6,7 +6,7 @@
 - [x] [Hapi Js](https://hapijs.com/) - Create REST API with Hapi Js
 - [x] [Knex](http://knexjs.org/) - SQL query builder for js
 - [x] [Good](https://github.com/hapijs/good) - Logger
-- [ ] [Config](https://www.npmjs.com/package/config) - Configure your app for different environments
+- [x] [Config](https://www.npmjs.com/package/config) - Configure your app for different environments
 - [ ] [Joi](https://github.com/hapijs/joi)- Object schema validation
 - [ ] [Dotenv](https://www.npmjs.com/package/dotenv) - Manage ENV variables
 - [ ] [Boom](https://github.com/jaredhanson/passport) - HTTP friendly error response.

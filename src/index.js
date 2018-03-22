@@ -1,5 +1,7 @@
 // import required modules
 import Hapi from 'hapi';
+// node-config
+import config from 'config';
 
 // import routes
 import routes from './config/routes';
@@ -7,10 +9,8 @@ import routes from './config/routes';
 import loggerOptions from './config/logger';
 
 // initialize Hapi server
-const server = new Hapi.Server({
-  host: 'localhost',
-  port: '3000',
-});
+const { host, port } = config.get('server');
+const server = new Hapi.Server({ host, port });
 
 // configure routes
 server.route(routes);
