@@ -10,7 +10,7 @@
 - [ ] [Joi](https://github.com/hapijs/joi)- Object schema validation
 - [ ] [Dotenv](https://www.npmjs.com/package/dotenv) - Manage ENV variables
 - [ ] [Boom](https://github.com/jaredhanson/passport) - HTTP friendly error response.
-- [ ] [Synk](https://snyk.io/) - Dependencies security
+- [x] [Synk](https://snyk.io/) - Dependencies security
 - [ ] [Authentication](https://github.com/jaredhanson/passport) - Authenticaiton library
 
 ## Directory Structure
