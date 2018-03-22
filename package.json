@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^17.2.3",
+    "hapi-auth-jwt": "^4.0.0",
+    "jsonwebtoken": "^8.2.0",
+    "knex": "^0.14.4",
+    "mysql": "^2.15.0"
+  }
 }
