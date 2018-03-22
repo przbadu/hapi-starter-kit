@@ -3,5 +3,16 @@
     "host": "localhost",
     "port": "3000"
   },
-  "secretKeyBase": "415a56d79388da01ca2de96a2b2e7e31dbbbc83a4a8492007b0e93a860c26cb22c6dadea6d0879407c04aac2d313461e93cb39730ac5410d9f08f4ab69061e05"
+  "secretKeyBase": "415a56d79388da01ca2de96a2b2e7e31dbbbc83a4a8492007b0e93a860c26cb22c6dadea6d0879407c04aac2d313461e93cb39730ac5410d9f08f4ab69061e05",
+  "databaseConfig": {
+    "client": "mysql",
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "birdbase_development",
+    "charset": "utf8",
+    "tableName": "knex_migrations",
+    "migrationDirectory": "./src/db/migrations",
+    "seedDirectory": "./src/db/seeds"
+  }
 }

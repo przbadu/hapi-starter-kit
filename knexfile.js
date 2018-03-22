@@ -1,39 +1,37 @@
-// Update with your config settings.
+const config = require('config');
 
-module.exports = {
-  development: {
-    client: 'mysql',
-    connection: {
-      host: 'localhost',
-      database: 'birdbase_development',
-      user:     'root',
-      password: '',
-      charset: 'utf8'
-    },
-    migrations: {
-      tableName: 'knex_migrations',
-      directory: './src/db/migrations'
-    },
-    seeds: {
-      directory: './src/db/seeds'
-    }
+const {
+  client,
+  host,
+  database,
+  user,
+  password,
+  charset,
+  tableName,
+  migrationDirectory,
+  seedDirectory,
+} = config.get('databaseConfig');
+
+const defaultOptions = {
+  client,
+  connection: {
+    host,
+    database,
+    user,
+    password,
+    charset,
   },
-
-  test: {
-    client: 'mysql',
-    connection: {
-      host: 'localhost',
-      database: 'birdbase_test',
-      user:     'root',
-      password: '',
-      charset: 'utf8'
-    },
-    migrations: {
-      tableName: 'knex_migrations',
-      directory: './app/db/migrations'
-    },
-    seeds: {
-      directory: './app/db/seeds/seed'
-    }
+  migrations: {
+    tableName,
+    directory: migrationDirectory,
+  },
+  seeds: {
+    directory: seedDirectory
   }
+};
+
+// Update with your config settings.
+module.exports = {
+  development: defaultOptions,
+  production: defaultOptions
 };

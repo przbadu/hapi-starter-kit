@@ -1,7 +1,11 @@
 {
   "server": {
-    "host": "localhost",
     "port": "80"
   },
-  "secretKeyBase": "15b8ecc562f6d7cc58c6a10dd25e8c0e9814b631082e53c644900f47d79837cec5a36bde073e3bc21913e2e26025ed64a863f99239d72e5f634510d30497d7d8"
+  "secretKeyBase": "15b8ecc562f6d7cc58c6a10dd25e8c0e9814b631082e53c644900f47d79837cec5a36bde073e3bc21913e2e26025ed64a863f99239d72e5f634510d30497d7d8",
+  "databaseConfig": {
+    "user": "root",
+    "password": "",
+    "database": "birdbase_production"
+  }
 }

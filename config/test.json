@@ -1,0 +1,6 @@
+{
+  "secretKeyBase": "415a56d79388da01ca2de96a2b2e7e",
+  "databaseConfig": {
+    "database": "birdbase_test"
+  }
+}
