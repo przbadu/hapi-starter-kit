@@ -1,6 +1,6 @@
-const birdsController = require('../app/controllers/birds_controller');
+import birdsController from '../app/controllers/birds_controller';
 
-const routes = [
+export default [
   // root routes
   { method: 'GET', path: '/', handler: (req, h) => { return "Hello World"; } },
 
@@ -13,5 +13,3 @@ const routes = [
   { method: 'PUT', path: '/birds', handler: birdsController.update },
   { method: 'DELETE', path: '/birds', handler: birdsController.destroy },
 ]
-
-module.exports = routes;

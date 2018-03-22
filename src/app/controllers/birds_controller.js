@@ -1,34 +1,42 @@
 /**
  * GET /birds
  */
-exports.list = (req, h) => {
+const list = (req, h) => {
   return { name: 'list of birds goes here' }
 }
 
 /**
  * GET /birds/:id
  */
-exports.get = (req, h) => {
+const get = (req, h) => {
   return { name: `Find a bird with id ${req.params.id}` }
 }
 
 /**
  * POST /birds
  */
-exports.create = (req, h) => {
+const create = (req, h) => {
   return { name: `Create a bird here` }
 }
 
 /**
  * PUT /birds/:id
  */
-exports.update = (req, h) => {
+const update = (req, h) => {
   return { name: `Update a bird with id ${req.params.id}` }
 }
 
 /**
  * DELETE /birds/:id
  */
-exports.destroy = (req, h) => {
+const destroy = (req, h) => {
   return { name: `Delete a bird with id ${req.params.id}` }
+}
+
+export default {
+  list,
+  get,
+  create,
+  update,
+  destroy
 }

@@ -1,10 +1,8 @@
-'use strict';
-
 // import required modules
-const Hapi = require('hapi');
+import Hapi from 'hapi';
 
 // import routes
-const routes = require('./config/routes');
+import routes from './config/routes';
 
 // initialize Hapi server
 const server = new Hapi.Server({
