@@ -8,8 +8,11 @@ import routes from './config/routes';
 // import loggerConfig
 import loggerOptions from './config/logger';
 
-// initialize Hapi server
+// grab configurations
 const { host, port } = config.get('server');
+const secretKey = config.get('secretKeyBase');
+
+// initialize Hapi server
 const server = new Hapi.Server({ host, port });
 
 // configure routes
@@ -19,6 +22,14 @@ server.route(routes);
  * Start / Stop server
  */
 const init = async () => {
+  // register hapi-auth-jwt2
+  await server.register(require('hapi-auth-jwt2'));
+  server.auth.strategy('jwt', 'jwt', {
+    key: secretKey,
+    verifyOptions: { algorithms: ['HS256'] }
+  });
+  server.auth.default('jwt');
+
   // register good logger
   await server.register({
     plugin: require('good'),
