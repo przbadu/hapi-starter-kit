@@ -21,8 +21,6 @@ Initial directory structure, we will modify it in future.
 .                  
 ├── bootstrap.js   
 ├── knexfile.js    
-├── logs           
-│   └── development.log            
 ├── node_modules            
 ├── package.json   
 ├── src            
@@ -44,6 +42,6 @@ Initial directory structure, we will modify it in future.
 │   └── index.js   
 └── yarn.lock      
 
-10 directories, 14 files         
+9 directories, 14 files         
 ```
  

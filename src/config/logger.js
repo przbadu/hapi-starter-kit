@@ -29,7 +29,7 @@ export default {
       name: 'SafeJson'
     }, {
       module: 'good-file',
-      args: ['./logs/development.log']
+      args: ['./src/logs/development.log']
     }],
 
     /**
