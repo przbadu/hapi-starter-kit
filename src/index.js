@@ -3,6 +3,8 @@ import Hapi from 'hapi';
 
 // import routes
 import routes from './config/routes';
+// import loggerConfig
+import loggerOptions from './config/logger';
 
 // initialize Hapi server
 const server = new Hapi.Server({
@@ -17,7 +19,16 @@ server.route(routes);
  * Start / Stop server
  */
 const init = async () => {
+  // register good logger
+  await server.register({
+    plugin: require('good'),
+    options: loggerOptions,
+  });
+
+  // start server
   await server.start();
+
+  // display console message about the server's url
   console.log(`Server running at: ${server.info.uri}`);
 }
 
