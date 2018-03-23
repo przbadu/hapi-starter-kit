@@ -1,8 +1,18 @@
+import Knex from '../../config/knex';
+
 /**
  * GET /birds
  */
 const list = (req, h) => {
-  return { name: 'list of birds goes here' }
+  return Knex('birds')
+    .where({ isPublic: true })
+    .select('name', 'species', 'picture_url')
+    .then(data => {
+      return { data, status: 200 }
+    })
+    .catch(error => {
+      return { error }
+    })
 }
 
 /**

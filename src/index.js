@@ -18,14 +18,23 @@ const server = new Hapi.Server({ host, port });
 // configure routes
 server.route(routes);
 
+// hapi-auth-jwt2 validate method
+const validate = async (decoded, request, h) => {
+  // perform extra check with payloads like:
+  // decoded.id, decoded.username
+  return { isValid: true }
+}
+
 /*
  * Start / Stop server
  */
 const init = async () => {
   // register hapi-auth-jwt2
   await server.register(require('hapi-auth-jwt2'));
+
   server.auth.strategy('jwt', 'jwt', {
     key: secretKey,
+    validate,
     verifyOptions: { algorithms: ['HS256'] }
   });
   server.auth.default('jwt');
