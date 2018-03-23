@@ -7,11 +7,10 @@
 - [x] [Knex](http://knexjs.org/) - SQL query builder for js
 - [x] [Good](https://github.com/hapijs/good) - Logger
 - [x] [Config](https://www.npmjs.com/package/config) - Configure your app for different environments
-- [ ] [Joi](https://github.com/hapijs/joi)- Object schema validation
-- [ ] [Dotenv](https://www.npmjs.com/package/dotenv) - Manage ENV variables
-- [ ] [Boom](https://github.com/hapijs/boom) - HTTP friendly error response.
+- [x] [Joi](https://github.com/hapijs/joi)- Object schema validation
+- [x] [Boom](https://github.com/hapijs/boom) - HTTP friendly error response.
 - [x] [Synk](https://snyk.io/) - Dependencies security
-- [ ] [Authentication](https://github.com/jaredhanson/passport) - Authenticaiton library
+- [ ] [Dotenv](https://www.npmjs.com/package/dotenv) - Manage ENV variables
 
 ## Directory Structure
 

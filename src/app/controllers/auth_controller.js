@@ -1,7 +1,8 @@
-import User from '../models/user';
+import Authentication from '../models/authentication';
 
 export default {
   auth: (req, h) => {
-    return User.authenticate(req.payload);
+    const auth = new Authentication(req.payload);
+    return auth.authenticate()
   }
 }

@@ -1,35 +1,27 @@
 import Bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-import config from 'config';
+import Boom from 'boom';
+import Joi from 'joi';
 import Knex from './../../config/knex';
 
-const secretKey = config.get('secretKeyBase');
 
-export default {
-  authenticate: ({ username, password }) => {
-    if (!username) return { data: 'username is missing' }
-    if (!password) return { data: 'password is missing' }
+export default class User {
+  constructor(params = {}) {
+    this.first_name = params.first_name;
+    this.last_name = params.last_name;
+    this.username = params.username;
+    this.email = params.email;
+    this.password = params.password;
+  }
 
-    return Knex('users').where({ username })
-      .select('guid', 'password')
-      .then(user => {
-        if (!user) return { data: 'Invalid username or password', status: 401 }
-
-        // compare password using bcrypt
-        let token;
-
-        if(Bcrypt.compare(password, password)) {
-          token = jwt.sign(
-            { username, scope: user.guid},
-            secretKey,
-            { algorithm: 'HS256', expiresIn: '2h' }
-          )
-        }
-
-        return { token }
-      })
-      .catch(error => {
-        return { data: 'Something went wrong!', status: 500 }
-      })
+  // Joi validation schema
+  // Usage: before inserting into database
+  schema() {
+    return Joi.object().keys({
+      first_name: Joi.string().min(3).max(50).required(),
+      last_name: Joi.string().min(3).max(50).required(),
+      username: Joi.string().min(3).max(30).required(),
+      email: Joi.strict().email(),
+      password: Joi.string().regex(/^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/),
+    })
   }
 }
