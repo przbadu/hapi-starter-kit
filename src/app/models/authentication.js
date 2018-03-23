@@ -59,7 +59,7 @@ export default class Authentication {
     return this.findByUsername()
       .then(user => {
         token = this.validate(user); // validate user in database
-        if(token == false) return Boom.unauthorized('Invalid username or password')
+        if(typeof token===undefined || token === false) return Boom.unauthorized('Invalid username or password')
         return { token }
       })
       .catch(error => {
