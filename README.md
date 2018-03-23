@@ -9,7 +9,7 @@
 - [x] [Config](https://www.npmjs.com/package/config) - Configure your app for different environments
 - [ ] [Joi](https://github.com/hapijs/joi)- Object schema validation
 - [ ] [Dotenv](https://www.npmjs.com/package/dotenv) - Manage ENV variables
-- [ ] [Boom](https://github.com/jaredhanson/passport) - HTTP friendly error response.
+- [ ] [Boom](https://github.com/hapijs/boom) - HTTP friendly error response.
 - [x] [Synk](https://snyk.io/) - Dependencies security
 - [ ] [Authentication](https://github.com/jaredhanson/passport) - Authenticaiton library
 

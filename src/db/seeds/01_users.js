@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
       last_name: 'Raj Badu',
       username: 'przbadu',
       email: 'przbadu@gmail.com',
-      password: 'password',
+      password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm', // secret
       guid: 'f03ede7c-b121-4112-bcc7-130a3e87988c'
     },
   ]

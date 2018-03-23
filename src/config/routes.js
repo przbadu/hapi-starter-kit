@@ -1,3 +1,4 @@
+import authController from '../app/controllers/auth_controller';
 import birdsController from '../app/controllers/birds_controller';
 
 /**
@@ -12,6 +13,9 @@ import birdsController from '../app/controllers/birds_controller';
 export default [
   // root routes
   { method: 'GET', path: '/', config: { auth: false }, handler: (req, h) => { return "Hello World"; } },
+
+  // Auth route
+  { method: 'POST', path: '/auth', config: { auth: false }, handler: authController.auth },
 
   /**
    * Birds
