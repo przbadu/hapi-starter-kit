@@ -27,9 +27,9 @@
     "hapi-auth-jwt2": "^8.0.0",
     "joi": "^13.1.2",
     "jsonwebtoken": "^8.2.0",
-    "knex": "^0.14.4",
+    "knex": "^0.16.4",
     "mysql": "^2.15.0",
-    "snyk": "^1.70.2"
+    "snyk": "^1.290.1"
   },
   "devDependencies": {
     "nodemon": "^1.17.2"
